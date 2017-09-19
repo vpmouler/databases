@@ -1,9 +1,14 @@
+DROP DATABASE IF EXISTS chat;
+
 CREATE DATABASE chat;
 
 USE chat;
 
 CREATE TABLE messages (
-  /* Describe your table here.*/
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  message char(200),
+  name char(25),
+  room char(25)
 );
 
 /* Create other tables and define schemas for them here! */
