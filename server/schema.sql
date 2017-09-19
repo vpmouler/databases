@@ -14,6 +14,19 @@ CREATE TABLE messages (
 
 /* Create other tables and define schemas for them here! */
 
+CREATE TABLE username (
+  userId INT NOT NULL AUTO_INCREMENT,
+  username char(25),
+  PRIMARY KEY (userId)
+);
+
+CREATE TABLE testMessages (
+  objectId INT NOT NULL AUTO_INCREMENT,
+  roomname char(200),
+  userId INT,
+  PRIMARY KEY (objectId),
+  FOREIGN KEY (userId) REFERENCES username (userId)
+);
 
 
 
